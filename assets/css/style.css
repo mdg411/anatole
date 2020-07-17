@@ -1,6 +1,13 @@
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700|Montserrat:400');
+
 @charset "UTF-8";
+
+/* Basic Look: Colors (Background, navigation, text) */
 :root{
-  --bg-color:#fff;
+  --bg-color:#ffffff;
   --secondary-bg-color:#eeeeee;
   --heading-color: #5f5f5f;
   --body-color: rgba(0, 0, 0, 0.7);
@@ -12,28 +19,53 @@
   scroll-padding-top: 100px;
 }
 
+/* Dark Theme */
 html[data-theme='dark'] {
   --bg-color:#292a2d;
-  --secondary-bg-color:rgb(119, 119, 122);
-  --heading-color: rgb(169,169,179);
-  --body-color:rgb(169,169,179);
+  --secondary-bg-color: rgb(119, 119, 122);
+  --heading-color: rgb(169, 169, 179);
+  --body-color: rgb(169, 169, 179);
   --post-color: rgba(0, 0, 0, 0.44);
-  --border-color: rgb(38, 38, 38);
-  --pre-bg-color:rgb(33,33,45);
-  --nav-text-color:rgb(191, 191, 191);
+  --border-color: rgb(119, 119, 122);
+  --pre-bg-color: rgb(33, 33, 45);
+  --nav-text-color: rgb(191, 191, 191);
   --tag-color: rgb(191, 191, 191);
-  
 }
 
 html {
   background-color: var(--bg-color);
   -webkit-font-smoothing: antialiased;
-  
+}
+
+/* Fonts and Colors of Headers */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 2;
+  margin-top: 1.5em;
+  margin-bottom: 0em;
+}
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  margin-top: 1.5em;
+  margin-bottom: 0em;
+  text-align: left;
+}
+h3 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
   color: var(--body-color);
-  font-family: 'Verdana', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   font-size: 15px;
   width: 100%;
   margin: 0 auto 30px auto;
@@ -41,7 +73,7 @@ body {
 }
 
 p {
-  line-height: 1.9em;
+  line-height: 1.5em;
   font-weight: 400;
   font-size: 14px;
 }
@@ -89,11 +121,14 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-  color: #2660ab;
+  color: #4682B4;
 }
 
-/*basic styles ends*/
-/*animation starts*/
+/* basic styles ends */
+
+
+/* animations */
+/* ================================================================== */
 
 .animated {
   transition: top .8s linear;
@@ -152,18 +187,21 @@ a:hover, a:active {
   animation-name: fadeInDown;
 }
 
-/*animation ends*/
+/* Basic Elements */
+/* ================================================================== */
+
 .content {
   height: auto;
+  margin-right: 10%;
   float: right;
-  width: 60%;
+  width: 50%;
   margin-top: 60px;
 }
 
 .page-top {
-  width: 60%;
+  width: 100%;
   position: fixed;
-  right: 0;
+  left: 0px;
   z-index: 3;
   background-color: var(--bg-color);
   height: 60px;
@@ -184,7 +222,7 @@ a:hover, a:active {
   color: var(--nav-text-color);
 }
 .page-top .nav a:hover {
-  color: #2660ab;
+  color: #4682B4;
 }
 .page-top .nav a.current {
   color: var(--nav-text-color);
@@ -226,8 +264,10 @@ a:hover, a:active {
   background-size: cover;
   background-color: var(--bg-color);
   height: 100%;
-  top: 0;
+  bottom: 0px;
+  top: 70px;
   left: 0;
+  right: 0;
   position: fixed;
   z-index: 4;
   border-right: 1px solid var(--border-color);
@@ -243,8 +283,8 @@ a:hover, a:active {
   margin: 0 auto;
 }
 .sidebar .logo-title .title img {
-  width: 127px;
-  border-radius: 50%;
+  width: 400px;
+  /* border-radius: 50%; */
 }
 .sidebar .logo-title .title h3 {
   text-transform: uppercase;
@@ -278,7 +318,7 @@ a:hover, a:active {
   color: var(--heading-color);
 }
 .sidebar .social-links a:hover {
-  color: #2660ab;
+  color: #4682B4;
 }
 
 .post {
@@ -286,12 +326,14 @@ a:hover, a:active {
   margin: 30px;
 }
 .post .post-title h1 {
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-size: 30px;
   letter-spacing: 5px;
   line-height: 1;
 }
 .post .post-title h2 {
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 28px;
@@ -300,6 +342,7 @@ a:hover, a:active {
   color: var(--heading-color);
 }
 .post .post-title h3 {
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1;
@@ -307,6 +350,16 @@ a:hover, a:active {
   /* color: #464646; */
   color: var(--heading-color);
   font-size: 22px;
+  margin: 0;
+}
+.post .post-title h4 {
+  font-family: 'Merriweather', sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-weight: 600;
+  /* color: #464646; */
+  color: var(--heading-color);
+  font-size: 16px;
   margin: 0;
 }
 .post .post-title a {
@@ -320,7 +373,7 @@ a:hover, a:active {
 .post .post-content a {
   text-decoration: none;
   letter-spacing: 1px;
-  color: #2660ab;
+  color: #4682B4;
 }
 .post .post-content a:hover {
   color: #2F69B3;
@@ -366,7 +419,7 @@ a:hover, a:active {
   padding-right: 10px;
 }
 .post .post-footer .meta a:hover {
-  color: #2660ab;
+  color: #4682B4;
 }
 .post .post-footer .meta i {
   margin-right: 6px;
@@ -462,7 +515,7 @@ a:hover, a:active {
   color: #A6A6A6;
 }
 .footer a:hover {
-  color: #2660ab;
+  color: #4682B4;
 }
 
 /*for archive*/
@@ -499,7 +552,7 @@ a:hover, a:active {
   color: #8F8F8F;
 }
 .list-with-title .listing .listing-post a:hover {
-  color: #2660ab;
+  color: #4682B4;
 }
 
 /* share */
@@ -718,19 +771,21 @@ a.btn {
 }
 
 
-
+/* What happens when browser window becomes narrow */
 @media screen and (max-width: 960px) {
   .sidebar {
+    visibility: hidden; /* do not show sidebar */
     width: 100%;
     position: absolute;
     border-right: none;
+    height: 100%;
     z-index: 1;
   }
   .sidebar .logo-title {
     padding-top: 120px;
   }
   .sidebar .logo-title .title img {
-    width: 100px;
+    width: 300px;
   }
   .sidebar .logo-title .title h3 {
     font-size: 20px;
@@ -745,7 +800,7 @@ a.btn {
   }
 
   .content {
-    margin-top: 420px;
+    margin-top: 60px;
     width: 100%;
     z-index: 2;
     position: absolute;
