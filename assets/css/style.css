@@ -284,7 +284,7 @@ a:hover, a:active {
 }
 .sidebar .logo-title .title img {
   width: 400px;
-  /* border-radius: 50%; */
+  border-radius: 100%;
 }
 .sidebar .logo-title .title h3 {
   text-transform: uppercase;
