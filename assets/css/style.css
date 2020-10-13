@@ -283,7 +283,7 @@ a:hover, a:active {
   margin: 0 auto;
 }
 .sidebar .logo-title .title img {
-  width: 400px;
+  width: 350px;
   border-radius: 100%;
 }
 .sidebar .logo-title .title h3 {
@@ -773,26 +773,41 @@ a.btn {
 
 /* What happens when browser window becomes narrow */
 @media screen and (max-width: 960px) {
+
   .sidebar {
-    visibility: hidden; /* do not show sidebar */
+    visibility: hidden;
     width: 100%;
-    position: absolute;
-    border-right: none;
+    /* -webkit-background-size: cover; */
+    background-size: cover;
+    background-color: var(--bg-color);
     height: 100%;
-    z-index: 1;
+    bottom: 0px;
+    top: -150px;
+    left: 0;
+    right: 0;
+    position: relative;
+    z-index: 3;
+    border-right: 1px solid var(--border-color);
   }
   .sidebar .logo-title {
-    padding-top: 120px;
+    text-align: center;
+    padding-top: 240px;
+  }
+  .sidebar .logo-title .description {
+    font-size: 14px;
+  }
+  .sidebar .logo-title .logo {
+    margin: 0 auto;
   }
   .sidebar .logo-title .title img {
     width: 300px;
-  }
-  .sidebar .logo-title .title h3 {
-    font-size: 20px;
+    border-radius: 100%;
   }
 
   .page-top {
     width: 100%;
+    top: 0px;
+    position: fixed;
   }
 
   .post-title h3 {
@@ -800,7 +815,7 @@ a.btn {
   }
 
   .content {
-    margin-top: 60px;
+    margin-top: -550px;
     width: 100%;
     z-index: 2;
     position: absolute;
