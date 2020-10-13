@@ -775,7 +775,7 @@ a.btn {
 @media screen and (max-width: 960px) {
 
   .sidebar {
-    visibility: hidden;
+    /* visibility: hidden; */
     width: 100%;
     /* -webkit-background-size: cover; */
     background-size: cover;
@@ -794,14 +794,50 @@ a.btn {
     padding-top: 240px;
   }
   .sidebar .logo-title .description {
+    /* visibility: hidden; */
     font-size: 14px;
   }
   .sidebar .logo-title .logo {
     margin: 0 auto;
   }
   .sidebar .logo-title .title img {
-    width: 300px;
+    width: 250px;
     border-radius: 100%;
+  }
+  .sidebar .logo-title .title h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin: 0.6em;
+  }
+  .sidebar .logo-title .title a {
+    text-decoration: none;
+    color: var(--heading-color);
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .sidebar .social-links {
+    /* visibility: hidden; */
+    list-style: none;
+    padding: 5px;
+    font-size: 10px;
+    text-align: center;
+  }
+  .sidebar .social-links i {
+    margin-right: 3px;
+  }
+  .sidebar .social-links li {
+    display: inline;
+    padding: 0 4px;
+    line-height: 0;
+  }
+  .sidebar .social-links a {
+    color: var(--heading-color);
+  }
+  .sidebar .social-links a:hover {
+    color: #4682B4;
   }
 
   .page-top {
@@ -811,11 +847,12 @@ a.btn {
   }
 
   .post-title h3 {
-    line-height: 1.6;
+    line-height: 1.3;
   }
 
   .content {
-    margin-top: -550px;
+    /* margin-top: -550px; */
+    margin-top: -150px;
     width: 100%;
     z-index: 2;
     position: absolute;
