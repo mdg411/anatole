@@ -16,6 +16,7 @@
   --pre-bg-color: #f9f9fd;
   --nav-text-color:#5a5a5a;
   --tag-color: #424242;
+  --highlight-color: #4682B4;
   scroll-padding-top: 100px;
 }
 
@@ -46,7 +47,7 @@ h1 {
   letter-spacing: 2px;
   line-height: 2;
   margin-top: 1.5em;
-  margin-bottom: 0em;
+  margin-bottom: 1.0em;
 }
 h2 {
   font-family: 'Montserrat', sans-serif;
@@ -54,13 +55,25 @@ h2 {
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 1.5px;
-  line-height: 1;
+  line-height: 2;
   margin-top: 1.5em;
   margin-bottom: 0em;
   text-align: left;
 }
 h3 {
   font-family: 'Montserrat', sans-serif;
+  line-height: 2;
+}
+h4 {
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Merriweather', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  line-height: 1.5;
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+  text-align: left;
 }
 
 body {
@@ -121,7 +134,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-  color: #4682B4;
+  color: var(--highlight-color);
 }
 
 /* basic styles ends */
@@ -192,9 +205,11 @@ a:hover, a:active {
 
 .content {
   height: auto;
-  margin-right: 10%;
-  float: right;
-  width: 50%;
+  /* margin-left: 630px; */
+  max-width: 800px;
+  float: left;
+  width: 55%;
+  margin-left: 39%;
   margin-top: 60px;
 }
 
@@ -222,7 +237,7 @@ a:hover, a:active {
   color: var(--nav-text-color);
 }
 .page-top .nav a:hover {
-  color: #4682B4;
+  color: var(--highlight-color);
 }
 .page-top .nav a.current {
   color: var(--nav-text-color);
@@ -258,8 +273,20 @@ a:hover, a:active {
   padding-right: 40px;
 }
 
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 0px;
+}
+
+.grid-container > div {
+  text-align: left;
+}
+
 .sidebar {
-  width: 40%;
+  /* min-width: 600px; */
+  width: 38%;
   -webkit-background-size: cover;
   background-size: cover;
   background-color: var(--bg-color);
@@ -274,16 +301,17 @@ a:hover, a:active {
 }
 .sidebar .logo-title {
   text-align: center;
-  padding-top: 240px;
+  padding-top: 50px;
 }
 .sidebar .logo-title .description {
-  font-size: 14px;
+  font-size: 15px;
 }
 .sidebar .logo-title .logo {
   margin: 0 auto;
 }
 .sidebar .logo-title .title img {
-  width: 350px;
+  width: 50%;
+  max-width: 250px;
   border-radius: 100%;
 }
 .sidebar .logo-title .title h3 {
@@ -303,22 +331,22 @@ a:hover, a:active {
 .sidebar .social-links {
   list-style: none;
   padding: 0;
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
 }
 .sidebar .social-links i {
-  margin-right: 3px;
+  margin-right: 0px;
 }
 .sidebar .social-links li {
   display: inline;
-  padding: 0 4px;
+  padding: 0 0px;
   line-height: 0;
 }
 .sidebar .social-links a {
   color: var(--heading-color);
 }
 .sidebar .social-links a:hover {
-  color: #4682B4;
+  color: var(--highlight-color);
 }
 
 .post {
@@ -373,7 +401,7 @@ a:hover, a:active {
 .post .post-content a {
   text-decoration: none;
   letter-spacing: 1px;
-  color: #4682B4;
+  color: var(--highlight-color);
 }
 .post .post-content a:hover {
   color: #2F69B3;
@@ -419,7 +447,7 @@ a:hover, a:active {
   padding-right: 10px;
 }
 .post .post-footer .meta a:hover {
-  color: #4682B4;
+  color: var(--highlight-color);
 }
 .post .post-footer .meta i {
   margin-right: 6px;
@@ -515,7 +543,7 @@ a:hover, a:active {
   color: #A6A6A6;
 }
 .footer a:hover {
-  color: #4682B4;
+  color: var(--highlight-color);
 }
 
 /*for archive*/
@@ -552,7 +580,7 @@ a:hover, a:active {
   color: #8F8F8F;
 }
 .list-with-title .listing .listing-post a:hover {
-  color: #4682B4;
+  color: var(--highlight-color);
 }
 
 /* share */
@@ -711,6 +739,23 @@ a.btn {
   padding: 6px 12px;
 }
 
+/* Style all font awesome icons */
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--heading-color);
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  color: var(--highlight-color);
+  <!-- opacity: 0.7; -->
+}
+
+
 /* Menu */
 .menu {
   float: right;
@@ -801,12 +846,12 @@ a.btn {
     margin: 0 auto;
   }
   .sidebar .logo-title .title img {
-    width: 250px;
+    max-width: 200px;
     border-radius: 100%;
   }
   .sidebar .logo-title .title h3 {
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 1px;
     line-height: 1;
@@ -818,26 +863,11 @@ a.btn {
     font-size: 2rem;
     font-weight: bold;
   }
-  .sidebar .social-links {
-    /* visibility: hidden; */
-    list-style: none;
-    padding: 5px;
-    font-size: 10px;
-    text-align: center;
-  }
-  .sidebar .social-links i {
-    margin-right: 3px;
-  }
-  .sidebar .social-links li {
-    display: inline;
-    padding: 0 4px;
-    line-height: 0;
-  }
   .sidebar .social-links a {
     color: var(--heading-color);
   }
   .sidebar .social-links a:hover {
-    color: #4682B4;
+    color: var(--highlight-color);
   }
 
   .page-top {
@@ -852,8 +882,9 @@ a.btn {
 
   .content {
     /* margin-top: -550px; */
-    margin-top: -150px;
+    margin-top: -170px;
     width: 100%;
+    margin-left: 0%;
     z-index: 2;
     position: absolute;
   }
