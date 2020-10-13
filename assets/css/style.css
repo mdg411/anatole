@@ -819,6 +819,45 @@ a.btn {
 /* What happens when browser window becomes narrow */
 @media screen and (max-width: 960px) {
 
+  /* Fonts and Colors of Headers */
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 2;
+    margin-top: 1.5em;
+    margin-bottom: 1.0em;
+  }
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 2;
+    margin-top: 1.5em;
+    margin-bottom: 0em;
+    text-align: left;
+  }
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2;
+  }
+  h4 {
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Merriweather', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1.1px;
+    line-height: 1.5;
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+    text-align: left;
+  }
+
+
   .sidebar {
     /* visibility: hidden; */
     width: 100%;
