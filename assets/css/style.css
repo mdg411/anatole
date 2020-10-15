@@ -325,7 +325,8 @@ a:hover, a:active {
 .sidebar .logo-title .title a {
   text-decoration: none;
   color: var(--heading-color);
-  font-size: 2rem;
+  font-size: 1.75rem;
+  letter-spacing: 1.25px;
   font-weight: bold;
 }
 .sidebar .social-links {
@@ -894,12 +895,12 @@ a.btn {
     font-weight: bold;
     letter-spacing: 1px;
     line-height: 1;
-    margin: 0.6em;
   }
   .sidebar .logo-title .title a {
     text-decoration: none;
     color: var(--heading-color);
-    font-size: 2rem;
+    font-size: 1.65rem;
+    letter-spacing: 1.25px;
     font-weight: bold;
   }
   .sidebar .social-links a {
@@ -936,6 +937,7 @@ a.btn {
     display: grid;
   }
 }
+
 
 
 /* Medium zoom */
